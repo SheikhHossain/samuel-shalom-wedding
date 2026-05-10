@@ -69,14 +69,15 @@
     }
 
     .slide {
-      position: absolute; inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1.6s ease;
-      transform: scale(1.04);
-      transition: opacity 1.6s ease, transform 8s ease;
-    }
+  position: absolute; inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--deep); /* fills the empty sides */
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.6s ease, transform 8s ease;
+}
     .slide.active { opacity: 1; transform: scale(1); }
 
     .slide::after {
@@ -717,10 +718,9 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1519455953755-9d11a8f7ca93?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1529634897315-78a2066e45c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"></div>
-
+    <div class="slide active" style="background-image:url('src/images/img5.jpeg')"></div>
+    <div class="slide" style="background-image:url('src/images/img2.jpeg')"></div>
+    <div class="slide" style="background-image:url('src/images/img3.jpeg')"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">Together with their families</p>
       <h1 class="hero-names">
@@ -926,13 +926,13 @@
     </div>
     <div class="gallery-grid reveal" style="max-width:1240px;margin:0 auto;padding:0 5% 7rem;">
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1571667811491-8f20c5b12e75?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="couple" />
+        <img src="src/images/img1.jpeg" alt="couple" />
       </div>
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1529634897315-78a2066e45c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="couple" />
+        <img src="src/images/img2.jpeg" alt="couple" />
       </div>
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="wedding" />
+        <img src="src/images/img3.jpeg" alt="couple" />
       </div>
     </div>
   </section>
