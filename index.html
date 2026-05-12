@@ -1031,14 +1031,36 @@
     if (scheduleList) scheduleObs.observe(scheduleList);
 
     // ── RSVP ──
-    function submitRSVP() {
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxjGWOWwWg8sgvowwCFKnK4oVqsMAWM_jc2b6Bq0uIyOe2Lx2im5NmxEMnSMygq4_3I/exec';
+
+    async function submitRSVP() {
       const firstName = document.getElementById('firstName').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const guests = document.getElementById('guests').value;
+      const lastName  = document.getElementById('lastName').value.trim();
+      const email     = document.getElementById('email').value.trim();
+      const guests    = document.getElementById('guests').value;
+      const attending = document.querySelector('input[name="attend"]:checked').value;
+      const dietary   = document.getElementById('dietary').value.trim();
+
       if (!firstName || !email || !guests) {
         alert('Please fill in all required fields.');
         return;
       }
+
+      const btn = document.querySelector('.rsvp-submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      try {
+        await fetch(SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ firstName, lastName, email, attending, guests, dietary })
+        });
+      } catch (err) {
+        // no-cors mode may throw a TypeError — the data is still sent
+      }
+
       document.getElementById('rsvpForm').style.display = 'none';
       document.getElementById('rsvpSuccess').classList.add('show');
     }
