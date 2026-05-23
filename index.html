@@ -592,6 +592,54 @@
 
     .gallery-item:not(:first-child) { min-height: 260px; }
 
+    /* ── REGISTRY ── */
+    .registry-section {
+      background: var(--cream);
+    }
+
+    .registry-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .registry-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--bark);
+      margin-bottom: 3rem;
+    }
+
+    .registry-link {
+      display: inline-block;
+      padding: 1.1rem 3.2rem;
+      border: 1px solid var(--gold);
+      color: var(--bark);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .registry-link:hover {
+      background: var(--deep);
+      color: white;
+      border-color: var(--deep);
+    }
+
+    .registry-note {
+      margin-top: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--stone);
+    }
+
     /* ── FOOTER ── */
     footer {
       background: var(--deep);
@@ -714,6 +762,7 @@
     <a href="#details" class="nav-hide">Details</a>
     <a class="nav-monogram" href="#">S & S</a>
     <a href="#rsvp" class="nav-hide">RSVP</a>
+    <a href="#registry" class="nav-hide">Registry</a>
     <a href="#gallery" class="nav-hide">Gallery</a>
   </nav>
 
@@ -936,6 +985,27 @@
       </div>
       <div class="gallery-item">
         <img src="src/images/img3.jpeg" alt="Samuel and Shalom" />
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRY -->
+  <section class="registry-section" id="registry">
+    <div class="section-wrap">
+      <p class="section-eyebrow reveal">A Gift Is Never Required, But Always Appreciated</p>
+      <h2 class="section-title reveal">Wedding Registry</h2>
+      <div class="section-rule reveal"></div>
+      <div class="registry-inner reveal">
+        <p class="registry-body">
+          Your presence on our special day is the greatest gift of all. For those who wish to honour us with a gift, we have created a registry on Amazon.
+        </p>
+        <a
+          href="https://www.amazon.ca/wedding/guest-view/I6N7JWR3DRRT"
+          target="_blank"
+          rel="noopener"
+          class="registry-link"
+        >View Our Registry</a>
+        <p class="registry-note">Shalom Boogbaa Lebe &amp; Samuel Adamolekun</p>
       </div>
     </div>
   </section>
