@@ -922,7 +922,7 @@
               <input type="radio" name="attend" id="yes" value="yes" checked>
               <label for="yes">Joyfully Accepts</label>
               <input type="radio" name="attend" id="no" value="no">
-              <label for="no">Regretfully Declines</label>
+              <label for="no">Join Virtually</label>
             </div>
           </div>
 
@@ -942,18 +942,20 @@
             <input type="email" id="email" placeholder="grace@example.com" required />
           </div>
 
-          <div class="form-group">
-            <label>Number of Guests</label>
-            <select id="guests" required>
-              <option value="">Select…</option>
-              <option value="1">Just Me</option>
-              <option value="2">Me + 1</option>
-            </select>
-          </div>
+          <div id="inPersonFields" style="overflow:hidden;transition:max-height 0.4s ease,opacity 0.4s ease;max-height:400px;opacity:1;">
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <select id="guests">
+                <option value="">Select…</option>
+                <option value="1">Just Me</option>
+                <option value="2">Me + 1</option>
+              </select>
+            </div>
 
-          <div class="form-group">
-            <label>Dietary Requirements</label>
-            <textarea id="dietary" rows="3" placeholder="Vegetarian, allergies, etc."></textarea>
+            <div class="form-group">
+              <label>Dietary Requirements</label>
+              <textarea id="dietary" rows="3" placeholder="Vegetarian, allergies, etc."></textarea>
+            </div>
           </div>
 
           <button class="rsvp-submit" onclick="submitRSVP()">Send My RSVP</button>
@@ -1101,6 +1103,16 @@
     const scheduleList = document.querySelector('.schedule-list');
     if (scheduleList) scheduleObs.observe(scheduleList);
 
+    // ── RSVP ATTEND TOGGLE ──
+    const inPersonFields = document.getElementById('inPersonFields');
+    document.querySelectorAll('input[name="attend"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        const isVirtual = document.querySelector('input[name="attend"]:checked').value === 'no';
+        inPersonFields.style.maxHeight = isVirtual ? '0' : '400px';
+        inPersonFields.style.opacity = isVirtual ? '0' : '1';
+      });
+    });
+
     // ── RSVP ──
     const SHEET_URL = 'https://script.google.com/macros/s/AKfycbz7K9NCnvfry5L3SzYbdJLcEkTwUoLCH-JjOzSe7JHxSd8e6QvATLwq2i4XP6d90uvXvQ/exec';
 
@@ -1108,11 +1120,12 @@
       const firstName = document.getElementById('firstName').value.trim();
       const lastName  = document.getElementById('lastName').value.trim();
       const email     = document.getElementById('email').value.trim();
-      const guests    = document.getElementById('guests').value;
       const attending = document.querySelector('input[name="attend"]:checked').value;
-      const dietary   = document.getElementById('dietary').value.trim();
+      const isVirtual = attending === 'no';
+      const guests    = isVirtual ? 'Virtual' : document.getElementById('guests').value;
+      const dietary   = isVirtual ? '' : document.getElementById('dietary').value.trim();
 
-      if (!firstName || !email || !guests) {
+      if (!firstName || !email || (!isVirtual && !guests)) {
         alert('Please fill in all required fields.');
         return;
       }
