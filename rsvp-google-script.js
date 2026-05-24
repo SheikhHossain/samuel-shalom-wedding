@@ -91,8 +91,8 @@ function buildAttendingEmail(name) {
     <!-- Header -->
     <tr>
       <td style="background:#1e1812;padding:44px 40px 36px;text-align:center;">
-        <div style="font-size:38px;color:#d4bc94;font-weight:300;letter-spacing:6px;line-height:1;">S &amp; S</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:4px;text-transform:uppercase;margin-top:10px;">Samuel &amp; Shalom</div>
+        <div style="font-size:28px;color:#d4bc94;font-weight:300;letter-spacing:4px;line-height:1;">Shalom &amp; Samuel</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:4px;text-transform:uppercase;margin-top:10px;">July 3, 2026</div>
       </td>
     </tr>
 
@@ -117,13 +117,34 @@ function buildAttendingEmail(name) {
         <p style="font-size:16px;color:#3a2e22;line-height:1.85;margin:0 0 20px;text-align:left;">
           As the date gets closer, we'll send along any additional details you might need. In the meantime, be kindly reminded that the wedding is by invite only — please do not share the link except if you're adding a guest to RSVP. If you have any questions, feel free to reach out anytime.
         </p>
+
+        <!-- Registry -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#ede5d8;border-radius:2px;margin-bottom:32px;">
+          <tr><td style="padding:28px 36px;text-align:center;">
+            <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a7d6e;margin:0 0 12px;">Wedding Registry</p>
+            <p style="font-size:15px;color:#3a2e22;line-height:1.75;margin:0 0 6px;">
+              Your presence is the greatest gift of all. For those who wish to honour us with a gift, we have set up a registry on Amazon under:
+            </p>
+            <p style="font-size:15px;font-style:italic;color:#1e1812;margin:0 0 20px;">
+              Shalom Boogbaa Lebe &amp; Samuel Adamolekun
+            </p>
+            <a href="https://www.amazon.ca/wedding/guest-view/I6N7JWR3DRRT"
+               style="display:inline-block;padding:12px 32px;background:#1e1812;color:#d4bc94;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-family:Arial,sans-serif;margin-bottom:14px;">
+              View Our Registry
+            </a>
+            <p style="font-size:12px;color:#8a7d6e;margin:0;word-break:break-all;">
+              https://www.amazon.ca/wedding/guest-view/I6N7JWR3DRRT
+            </p>
+          </td></tr>
+        </table>
+
         <p style="font-size:16px;color:#3a2e22;line-height:1.85;margin:0 0 36px;text-align:left;">
           Looking forward to celebrating with you!
         </p>
 
         <p style="font-size:16px;color:#3a2e22;line-height:1.85;margin:0 0 36px;text-align:left;">
           With love,<br>
-          <span style="font-style:italic;color:#1e1812;">Samuel &amp; Shalom</span>
+          <span style="font-style:italic;color:#1e1812;">Shalom &amp; Samuel</span>
         </p>
 
         <p style="font-size:15px;color:#8a7d6e;font-style:italic;line-height:1.85;margin:0;text-align:center;">
@@ -161,8 +182,8 @@ function buildDecliningEmail(name) {
     <!-- Header -->
     <tr>
       <td style="background:#1e1812;padding:44px 40px 36px;text-align:center;">
-        <div style="font-size:38px;color:#d4bc94;font-weight:300;letter-spacing:6px;line-height:1;">S &amp; S</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:4px;text-transform:uppercase;margin-top:10px;">Samuel &amp; Shalom</div>
+        <div style="font-size:28px;color:#d4bc94;font-weight:300;letter-spacing:4px;line-height:1;">Shalom &amp; Samuel</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:4px;text-transform:uppercase;margin-top:10px;">July 3, 2026</div>
       </td>
     </tr>
 

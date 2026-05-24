@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samuel & Shalom | July 3, 2026</title>
+  <title>Shalom & Samuel | July 3, 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -55,7 +55,7 @@
     nav a:hover { color: var(--gold); }
     nav .nav-monogram {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
+      font-size: 1.15rem;
       font-weight: 300;
       letter-spacing: 0.05em;
     }
@@ -650,20 +650,21 @@
 
     .footer-monogram {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
+      font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 300;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       color: var(--gold-light);
       line-height: 1;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.6rem;
     }
 
     .footer-names {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 300;
-      letter-spacing: 0.12em;
-      color: rgba(255,255,255,0.7);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 200;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
       margin-bottom: 2.5rem;
     }
 
@@ -760,7 +761,7 @@
   <nav id="mainNav">
     <a href="#story" class="nav-hide">Our Story</a>
     <a href="#details" class="nav-hide">Details</a>
-    <a class="nav-monogram" href="#">S & S</a>
+    <a class="nav-monogram" href="#">Shalom & Samuel</a>
     <a href="#rsvp" class="nav-hide">RSVP</a>
     <a href="#registry" class="nav-hide">Registry</a>
     <a href="#gallery" class="nav-hide">Gallery</a>
@@ -775,9 +776,9 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Together with their families</p>
       <h1 class="hero-names">
-        Samuel
-        <span class="hero-amp">&amp;</span>
         Shalom
+        <span class="hero-amp">&amp;</span>
+        Samuel
       </h1>
       <div class="hero-date">July 3, 2026</div>
       <div class="hero-divider"></div>
@@ -1012,8 +1013,8 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-monogram">S &amp; S</div>
-    <div class="footer-names">Samuel &amp; Shalom</div>
+    <div class="footer-monogram">Shalom &amp; Samuel</div>
+    <div class="footer-names">July 3, 2026</div>
     <div class="footer-rule"></div>
     <div class="footer-date">July 3, 2026 &nbsp;·&nbsp; Winnipeg, Manitoba</div>
     <p class="footer-love">Made with love, for the best day ever</p>
@@ -1101,7 +1102,7 @@
     if (scheduleList) scheduleObs.observe(scheduleList);
 
     // ── RSVP ──
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxjGWOWwWg8sgvowwCFKnK4oVqsMAWM_jc2b6Bq0uIyOe2Lx2im5NmxEMnSMygq4_3I/exec';
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbz7K9NCnvfry5L3SzYbdJLcEkTwUoLCH-JjOzSe7JHxSd8e6QvATLwq2i4XP6d90uvXvQ/exec';
 
     async function submitRSVP() {
       const firstName = document.getElementById('firstName').value.trim();
